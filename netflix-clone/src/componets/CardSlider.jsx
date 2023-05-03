@@ -28,8 +28,8 @@ const CardSlider = ({ data, title }) => {
     <div className='mt-8 mb-10 relative px-4 max-w-[1460px]'
       onMouseOver={() => setShowSideButton(true)} onMouseLeave={() => setShowSideButton(false)}>
       <div>
-        <h1 className='pb-4 text-3xl font-bold text-red-500 z-30'>{title}</h1>
-        <div className='flex mx-auto gap-4 translate-x-0' ref={listRef}>
+        <h1 className='pb-4 text-3xl font-bold text-red-500 '>{title}</h1>
+        <div className='flex mx-auto gap-4 translate-x-0 z-[999]' ref={listRef}>
           {
             data?.map((movie, index) => {
               return <Card movieData={movie} title={title} index={index} key={movie.id} />
